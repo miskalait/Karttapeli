@@ -1,0 +1,226 @@
+body {
+    width: 1280px;
+    height: 720px;
+    margin: auto;
+    font-family: arial;
+    background-color: black;
+    margin-top: 4%;
+}
+
+#taustakuva {
+    width: 1280px;
+    height: 720px;
+}
+
+.peli {
+    position: relative;
+    text-align: center;
+    color: White;
+}
+
+/* help button */
+.top-left {
+    position: absolute;
+    top: 30px;
+    left: 25px;
+}
+
+/* Go back button*/
+.top-rigth {
+    position: absolute;
+    top: 30px; 
+    right: 110px;
+    width: 80px;
+}
+
+/* Sound button */
+.settings_left {
+    position: absolute;
+    top: 130px;
+    left: 25px;
+    width: 80px;
+}
+
+/* Settings for sound */
+#settings {
+    display: none;
+    background-color: none;
+    position: absolute;
+    top: 220px;
+    left: 35px;
+}
+
+#settings img {
+    width: 60px;
+    height: auto;
+    position: absolute;
+}
+
+#settings img:hover {
+    width: 65px;
+    height: auto;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 4;
+}
+
+button img {
+    width: 80px;
+}
+
+/* Draggable object class */
+.draggable {
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Slider */
+.slidecontainer {
+    width: 10px;
+    position: absolute;
+    top: 180px;
+    left: -41px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(270deg); /* vertical slider */
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    width: 150px; /* height */
+    height: 30px; /* width */
+    background-color: #d9d9d9;
+    box-shadow: 0px 0px 15px #333333;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 15px;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #7a6354;
+    cursor: pointer;
+}
+.slider::-moz-slider-thumb {
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+.slider::-o-slider-thumb {
+    -o-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 25px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+.slider::-ms-slider-thumb {
+    -ms-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+}
+
+/* slider images */
+#upimg {
+    position: absolute;
+    top: 85px;
+    left: 21px;
+}
+
+#downimg {
+    position: absolute;
+    top: 280px;
+    left: 21px;
+}
+
+#upimg img, #downimg img {
+    width: 30px;
+}
+
+#upimg img:hover,#downimg img:hover {
+    width: 30px;
+}
+
+#mute {
+    position: absolute;
+    top: 10px;
+}
+
+#unMute {
+    position: absolute;
+    top: 10px;
+}
+
+/* Video */
+#myVideo {
+    position: absolute;
+    width: 1280px;
+    height: 720px;
+    z-index: 5;
+    left: 0px;
+}
+
+.modal-backdrop {
+    background-color: #ccc;
+}
+
+.modal-backdrop.in {
+    opacity: 0.2;
+}
+
+#exitVideo {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    z-index: 6;
+}
+
+#video {
+    position: absolute;
+    background-color: #999999;
+    width: 1280px;
+    height: 720px;
+    z-index: 6;
+    box-shadow: 5px 5px 50px #000000;
+}
+
+/* Play Again */
+#playAgain {
+    position: absolute;
+    bottom: 110px;
+    right: 110px;
+}
+
+#playAgain img {
+    width: 85px;
+    height: auto;
+    position: absolute;
+}
+
+#playAgain img:hover {
+    width: 90px;
+    height: auto;
+}

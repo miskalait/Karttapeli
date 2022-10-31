@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peli</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/helppage.css">
+    <link rel="stylesheet" href="style/sound.css">
+    <link rel="stylesheet" href="style/backbutton.css">
+    <link rel="stylesheet" href="style/maat.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        function playAudio() { 
+            var myAudio = document.getElementById("backgroundmusic");
+            myAudio.play();
+            document.getElementById('mute').style.display = "none";
+            document.getElementById('unMute').style.display = "";
+        } 
+            
+        function pauseAudio() {
+            var myAudio = document.getElementById("backgroundmusic");
+            myAudio.pause();
+            document.getElementById("mute").style.display = "";
+            document.getElementById("unMute").style.display = "none";
+        }
+            
+        function thisVolume(volume_value) {
+            var myaudio = document.getElementById("backgroundmusic");
+            myaudio.volume = volume_value / 100;
+        }
+            var slider = document.getElementById("range");
+            output.innerHTML = slider.value;
+        
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+            
+            function myFunction() {
+            var x = document.getElementById("myVideo").autoplay;
+            document.getElementById("demo").innerHTML = x;
+        }
+            
+    </script>
+</head>
+<body>
+    
+        <!-- Video before page -->
+    <div id="video">
+        <button id="exitVideo"><img src="images/backbutton.png" alt="back"></button>
+        <video src="video/Intro.mp4" controls autoplay></video>
+    </div>
+    
+    <!-- Background image and game class -->
+    <div class="peli">
+        <img src="images/Eurooppa.png" id="taustakuva" alt="background">
+        
+        <!-- Play again -->
+        <div id="playAgain"><button onClick="window.location.reload();"><img src="images/againbutton.png"></button></div>
+        
+        <!-- Buttons for Go back and Help -->
+        <div class="top-left"><button id="showHelp"><img src="images/helpbutton.png" alt="help"></button></div>
+            
+            
+        <!-- Help page when pressed help button -->
+    <div id="helppage">
+        <button id="exitHelp"><img src="images/backbutton.png" alt="back"></button>
+        <h1 id="help_h1">HELP</h1>
+        <p id="help_p">How To Play</p>
+        <br>
+        <h2 id="help_h2">------------------------------- VOLUME -------------------------------</h2>
+        <p id="help_p"><img src="images/soundbutton.png" alt="volume"><img src="images/mutebutton.png" alt="volume"><br>ON / OFF<br>You can mute and unmute volume by pressing the volume-button or you can adjust volume with slider</p>
+        <h2 id="help_h2">------------------------------ MAP GAME ----------------------------</h2>
+        <p id="help_p">Drag and drop correct country name to correct place</p>
+        <br>
+        <h2 id="help_h2">------------------------------ PLAY AGAIN ----------------------------</h2>
+        <p id="help_p">To play again press <img src="images/againbutton.png" alt="back"> on the bottom rigth corner.</p>
+        <br>
+        <h2 id="help_h2">------------------------------ FRONTPAGE ----------------------------</h2>
+        <p id="help_p">Go back to the start screen by pressing <img src="images/backbutton.png" alt="back"> on the right corner.</p>
+    </div>
+            
+        <!-- Sounds options -->    
+    <div>
+    <div class="settings_left">
+        <button class="button" id="showSettings"><img src="images/settingsbutton.png" alt="settings"></button>
+    </div>
+            
+        <!-- settings -->
+    <div id="settings">
+        <button class="button" id="mute" onclick="playAudio()"><img draggable="false" src="images/mutebutton.png" alt="sound"></button>
+        <button class="button" id="unMute" onclick="pauseAudio()"><img draggable="false" src="images/soundbutton.png" alt="mute"></button>
+                    
+        <div id="upimg"><img draggable="false" src="images/soundbutton.png" alt="sound"></div>
+                    
+                <!-- slider -->
+    <div class="slidecontainer">
+        <input id="vol-control" class="slider" type="range" min="0" max="100" step="1" oninput="thisVolume(this.value)" onchange="thisVolume(this.value)">
+    </div>
+                    
+    <div id="downimg"><img draggable="false" src="images/mutebutton.png" alt="sound"></div>
+    </div>
+    <!-- Music -->
+    <div>
+        <audio id="backgroundmusic" autoplay loop>
+        <source src="music/ofeliasdream.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    </div>
+        
+    <div>
+        <!-- Picture of draggable object -->
+        <img src="images/Finns.png" id="finns" class="draggable"/>
+        <img src="images/Swedish%20States.png" id="sweden" class="draggable"/>
+        <img src="images/Norway.png" id="norway" class="draggable"/>
+        <img src="images/Danish%20States.png" id="danish" class="draggable"/>
+        <img src="images/danelaw.png" id="danelaw" class="draggable"/>
+        <img src="images/Iceland.png" id="iceland" class="draggable"/>
+        <img src="images/Wessex.png" id="wessex" class="draggable"/>
+        <img src="images/Britanny.png" id="britanny" class="draggable"/>
+        <img src="images/East%20Francia.png" id="east" class="draggable"/>
+        <img src="images/West%20Francia.png" id="west" class="draggable"/>
+        <img src="images/Kievan%20Rus.png" id="rus" class="draggable"/>
+        <img src="images/Northumbria.png" id="northumbria" class="draggable"/>
+        <img src="images/scotland.png" id="scotland" class="draggable"/>
+        <img src="images/welsh_states.png" id="welsh" class="draggable"/>
+        
+        <!-- Drag drop targets -->
+        <img src="images/Button.png" id="finnstarget"/>
+        <img src="images/Button.png" id="swedishstarget" />
+        <img src="images/Button.png" id="norwaytarget"/>
+        <img src="images/Button.png" id="Danishtarget"/>
+        <img src="images/Button.png" id="Danelawtarget"/>
+        <img src="images/Button.png" id="Wessextarget"/>
+        <img src="images/Button.png" id="Northumbriatarget"/>
+        <img src="images/Button.png" id="Icelandtarget"/>
+        <img src="images/Button.png" id="WestFranciatarget"/>
+        <img src="images/Button.png" id="EastFranciatarget"/>
+        <img src="images/Button.png" id="Britannytarget"/>
+        <img src="images/Button.png" id="rustarget"/>
+        <img src="images/Button.png" id="scotlandtarget"/>
+        <img src="images/Button.png" id="welshtarget"/>
+    </div>
+            
+    </div>
+        
+        
+        
+        <!--JS--> 
+<script>
+var correct = 0;
+
+$(document).ready(function(){
+    
+    // help sivu
+    $("#showHelp").click(function(){
+        $("#helppage").fadeIn(700);
+    });
+    $("#exitHelp").click(function(){
+        $("#helppage").fadeOut(700);
+    });
+    
+    $("#exitVideo").click(function(){
+        $("#video").fadeOut(700);
+    });
+    
+    // sound on/off
+    $("#showSettings").click(function(){
+        $("#settings").show();
+    });
+    
+    // Draggable targets, drop and change img when correct country
+    $(".draggable").draggable({stack:".draggable"});
+    
+    $("#finnstarget").droppable({
+        accept: "#finns",
+        drop: function(event, ui) {
+            $(ui.draggable).fadeTo("slow", 0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#swedishstarget").droppable({
+        accept: "#sweden",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#norwaytarget").droppable({
+        accept: "#norway",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#Danishtarget").droppable({
+        accept: "#danish",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#Danelawtarget").droppable({
+        accept: "#danelaw",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+     
+    $("#Icelandtarget").droppable({
+        accept: "#iceland",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+     
+    $("#Wessextarget").droppable({
+        accept: "#wessex",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+     
+    $("#Britannytarget").droppable({
+        accept: "#britanny",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+     
+    $("#EastFranciatarget").droppable({
+        accept: "#east",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+     
+    $("#WestFranciatarget").droppable({
+        accept: "#west",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+
+    $("#rustarget").droppable({
+        accept: "#rus",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#Northumbriatarget").droppable({
+        accept: "#northumbria",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#scotlandtarget").droppable({
+        accept: "#scotland",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    $("#welshtarget").droppable({
+        accept: "#welsh",
+        drop: function(event,ui) {
+            $(ui.draggable).fadeTo("slow",0.0,removeElement);
+            console.log("jotain");
+            $(this).attr("src", "images/checkmark.png");
+        }
+    });
+    
+    // Close sound setting page when clicked
+    $(document).mouseup(function (e) { 
+            if ($(e.target).closest("#settings").length 
+            === 0) { 
+            $("#settings").fadeOut(700);
+        } 
+    });
+    
+    $(document).mouseup(function (e) { 
+            if ($(e.target).closest("#helppage").length 
+            === 0) { 
+            $("#helppage").fadeOut(700);
+        } 
+    });
+    
+    $("#myModal").modal()
+        $(".container").hide();
+        document.getElementById('myVideo').addEventListener('ended', closeModal, false);
+
+    function closeModal() {
+        $(".container").show();
+        $('#myModal').modal('hide');
+    }
+    
+    // remove element when correct element is dragged over a target
+    function removeElement() {
+        $(this).remove();
+        correct++;
+        if (correct == 3) {
+        }
+    }    
+});
+    
+    
+
+
+</script>   
+
+
+    </body>
+</html>

@@ -1,0 +1,73 @@
+#showHelp {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+#showHelp img {
+    width: 80px;
+}
+
+#showHelp img:hover {
+    width: 90px;
+}
+
+#exitHelp {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 30px;
+}
+
+#exitHelp img {
+    width: 80px;
+}
+
+#exitHelp img:hover {
+    width: 90px;
+}
+
+#helppage {
+    display: none;
+    position: absolute;
+    background-color: #999999;
+    width: 1000px;
+    height: 660px;
+    margin: 0px 140px 0px 140px;
+    padding: 10px;
+    top: 20px;
+    z-index: 3;
+    box-shadow: 5px 5px 50px #000000;
+}
+
+#help_h1 {
+    text-align: center;
+    font-family: viner hand itc;
+    color: #404040;
+    font-size: 50px;
+    margin: 8px 0px 8px 0px;
+}
+
+#help_h2 {
+    text-align: center;
+    font-family: viner hand itc;
+    color: #404040;
+    font-size: 30px;
+    margin: 0;
+}
+
+#help_p {
+    text-align: center;
+    font-family: calibri;
+    font-style: normal;
+    color: #404040;
+    font-size: 20px;
+    margin: 0;
+}
+
+#help_p img {
+    width: 50px;
+}

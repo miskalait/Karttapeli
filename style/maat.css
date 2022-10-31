@@ -1,0 +1,211 @@
+/* Draggable countries */
+#finns {
+    left: 230px;
+    top: 630px;
+    height: 30px;
+    width: 120px;
+}
+
+#sweden {
+    left: 230px;
+    top: 675px;
+    height: 30px;
+    width: 175px;
+}
+
+#norway {
+    left: 230px;
+    top: 540px;
+    height: 40px;
+    width: 120px;
+}
+
+#danish {
+    left: 420px;
+    top: 540px;
+    height: 30px;
+    width: 200px;
+}
+
+#danelaw {
+    left: 230px;
+    top: 590px;
+    height: 30px;
+    width: 150px;
+}
+
+#iceland {
+    left: 420px;
+    top: 635px;
+    height: 30px;
+    width: 150px;
+}
+
+#wessex {
+    left: 420px;
+    top: 590px;
+    height: 30px;
+    width: 130px;
+}
+
+#britanny {
+    left: 420px;
+    top: 675px;
+    height: 40px;
+    width: 150px;
+}
+
+#east {
+    left: 10px;
+    top: 590px;
+    height: 30px;
+    width: 180px;
+}
+
+#west {
+    left: 10px;
+    top: 630px;
+    height: 30px;
+    width: 180px;
+}
+
+#rus {
+    left: 10px;
+    top: 675px;
+    height: 30px;
+    width: 180px;
+}
+
+#northumbria {
+    left: 10px;
+    top: 540px;
+    height: 30px;
+    width: 200px;
+}
+
+#scotland {
+    left: 600px;
+    top: 660px;
+    height: 35px;
+    width: 180px;
+}
+
+#welsh {
+    left: 600px;
+    top: 600px;
+    height: 35px;
+    width: 180px;
+}
+
+/* Drop country targets */
+#finnstarget {
+    position: absolute;
+    right: 250px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+
+#swedishstarget {
+    position: absolute;
+    right: 450px;
+    top: 200px;
+    height: 50px;
+    width: 50px;
+}
+
+#norwaytarget {
+    position: absolute;
+    right: 530px;
+    top: 130px;
+    height: 50px;
+    width: 50px;  
+}
+
+#Danishtarget {
+    position: absolute;
+    right: 545px;
+    top: 270px;
+    height: 30px;
+    width: 30px;
+}
+
+#Danelawtarget {
+    position: absolute;
+    right: 725px;
+    top: 330px;
+    height: 30px;
+    width: 30px;
+}
+
+#Wessextarget {
+    position: absolute;
+    right: 740px;
+    top: 375px;
+    height: 30px;
+    width: 30px;
+}
+
+#Northumbriatarget {
+    position: absolute;
+    right: 750px;
+    top: 275px;
+    height: 30px;
+    width: 30px;
+}
+
+#Icelandtarget {
+    position: absolute;
+    right: 1000px;
+    top: 30px;
+    height: 45px;
+    width: 45px;
+}
+
+#WestFranciatarget {
+    position: absolute;
+    right: 670px;
+    top: 450px;
+    height: 50px;
+    width: 50px;
+}
+
+#EastFranciatarget {
+    position: absolute;
+    right: 530px;
+    top: 400px;
+    height: 50px;
+    width: 50px;
+}
+
+#Britannytarget {
+    position: absolute;
+    right: 750px;
+    top: 450px;
+    height: 30px;
+    width: 30px;
+}
+
+#rustarget {
+    position: absolute;
+    right: 150px;
+    top: 250px;
+    height: 50px;
+    width: 50px;
+}
+
+#scotlandtarget {
+    position: absolute;
+    right: 765px;
+    top: 235px;
+    height: 30px;
+    width: 30px;
+}
+
+#welshtarget {
+    position: absolute;
+    right: 770px;
+    top: 350px;
+    height: 30px;
+    width: 30px;
+}
